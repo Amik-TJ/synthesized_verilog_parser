@@ -1,0 +1,451 @@
+[08/29 21:59:25      0s] 
+[08/29 21:59:25      0s] Cadence Tempus(TM) Timing Signoff Solution.
+[08/29 21:59:25      0s] Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+[08/29 21:59:25      0s] 
+[08/29 21:59:25      0s] Version:	v21.14-s111_1, built Fri Jul 15 10:03:25 PDT 2022
+[08/29 21:59:25      0s] Options:	
+[08/29 21:59:25      0s] Date:		Tue Aug 29 21:59:25 2023
+[08/29 21:59:25      0s] Host:		thinker (x86_64 w/Linux 4.18.0-477.21.1.el8_8.x86_64) (16cores*24cpus*12th Gen Intel(R) Core(TM) i9-12900F 30720KB)
+[08/29 21:59:25      0s] OS:		CentOS Linux release 7.9.2009 (Core)
+[08/29 21:59:25      0s] 
+[08/29 21:59:25      0s] License:
+[08/29 21:59:25      0s] 		[21:59:25.217025] Configured Lic search path (21.01-s002): /CMC/tools/licenses/cadence.license
+
+[08/29 21:59:26      0s] 		tpsxl	Tempus Timing Signoff Solution XL	21.1	checkout succeeded
+[08/29 21:59:26      0s] 		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[08/29 21:59:26      0s] **WARN: (IMPSYT-1507):	The display is invalid and will start in no window mode
+[08/29 21:59:31      4s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Tempus Timing Signoff Solution v21.14-s111_1 (64bit) 07/15/2022 10:03 (Linux 3.10.0-693.el7.x86_64)
+[08/29 21:59:34      6s] @(#)CDS: NanoRoute 21.14-s111_1 NR220628-1629/21_14-UB (database version 18.20.582) {superthreading v2.17}
+[08/29 21:59:34      6s] @(#)CDS: AAE 21.14-s031 (64bit) 07/15/2022 (Linux 3.10.0-693.el7.x86_64)
+[08/29 21:59:34      6s] @(#)CDS: CTE 21.14-s031_1 () Jun 22 2022 10:32:17 ( )
+[08/29 21:59:34      6s] @(#)CDS: SYNTECH 21.14-s014_1 () May 29 2022 20:47:50 ( )
+[08/29 21:59:34      6s] @(#)CDS: CPE v21.14-s062
+[08/29 21:59:34      6s] @(#)CDS: OA 22.60-p074 Tue Apr 12 12:08:19 2022
+[08/29 21:59:34      6s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[08/29 21:59:34      6s] @(#)CDS: RCDB 11.15.0
+[08/29 21:59:34      6s] @(#)CDS: STYLUS 21.12-s008_1 (04/27/2022 03:28 PDT)
+[08/29 21:59:34      6s] Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+[08/29 21:59:34      6s] **INFO: (TMPDIR-1001): The environment variable TMPDIR is not set.
+Create and set the environment variable TMPDIR to '/tmp/ssv_tmpdir_1307693_DZaphq'.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_1307693_DZaphq'.
+[08/29 21:59:39      6s] <CMD> read_lib ../design_files/slow.lib
+[08/29 21:59:46      7s] <CMD> read_verilog synthesized_design.v
+[08/29 21:59:52      7s] <CMD> set_top_module four_bit_adder_reg_to_reg
+[08/29 21:59:52      7s] ***  ***
+[08/29 21:59:52      7s] #% Begin Load MMMC data ... (date=08/29 21:59:52, mem=819.3M)
+[08/29 21:59:52      7s] Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+[08/29 21:59:52      7s] #% End Load MMMC data ... (date=08/29 21:59:52, total cpu=0:00:00.0, real=0:00:00.0, peak res=820.2M, current mem=820.2M)
+[08/29 21:59:52      7s] *** Loading design ... ***
+[08/29 21:59:52      7s] Loading view definition file from .ssv_emulate_view_definition_1307693.tcl
+[08/29 21:59:52      7s] Reading default_emulate_libset_max timing library '/data/user/famik/data/rtl_synthesis/design_files/slow.lib' ...
+[08/29 21:59:52      7s] **WARN: (TECHLIB-302):	No function defined for cell 'HOLDX1'. The cell will only be used for analysis. (File /data/user/famik/data/rtl_synthesis/design_files/slow.lib)
+[08/29 21:59:52      7s] Read 462 cells in library 'tsmc18' 
+[08/29 21:59:53      7s] Ending "PreSetAnalysisView" (total cpu=0:00:00.2, real=0:00:01.0, peak res=878.9M, current mem=826.8M)
+[08/29 21:59:53      7s] *** End library_loading (cpu=0.00min, real=0.02min, mem=34.5M, fe_cpu=0.12min, fe_real=0.47min, fe_mem=808.4M) ***
+[08/29 21:59:53      7s] #% Begin Load netlist data ... (date=08/29 21:59:53, mem=826.8M)
+[08/29 21:59:53      7s] *** Begin netlist parsing (mem=808.4M) ***
+[08/29 21:59:53      7s] Reading verilog netlist 'synthesized_design.v'
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] *** Memory Usage v#1 (Current mem = 972.438M, initial mem = 394.918M) ***
+[08/29 21:59:53      7s] *** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=972.4M) ***
+[08/29 21:59:53      7s] #% End Load netlist data ... (date=08/29 21:59:53, total cpu=0:00:00.2, real=0:00:00.0, peak res=939.1M, current mem=931.1M)
+[08/29 21:59:53      7s] Set top cell to four_bit_adder_reg_to_reg.
+[08/29 21:59:53      7s] Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+[08/29 21:59:53      7s] late library set: default_emulate_libset_max
+[08/29 21:59:53      7s] early library set: default_emulate_libset_min
+[08/29 21:59:53      7s] Completed consistency checks. Status: Successful
+[08/29 21:59:53      7s] Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+[08/29 21:59:53      7s] late library set: default_emulate_libset_max
+[08/29 21:59:53      7s] early library set: default_emulate_libset_min
+[08/29 21:59:53      7s] Completed consistency checks. Status: Successful
+[08/29 21:59:53      7s] Ending "BindLib:" (total cpu=0:00:00.0, real=0:00:00.0, peak res=960.0M, current mem=960.0M)
+[08/29 21:59:53      7s] Building hierarchical netlist for Cell four_bit_adder_reg_to_reg ...
+[08/29 21:59:53      7s] ***** UseNewTieNetMode *****.
+[08/29 21:59:53      7s] *** Netlist is unique.
+[08/29 21:59:53      7s] ** info: there are 463 modules.
+[08/29 21:59:53      7s] ** info: there are 24 stdCell insts.
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] *** Memory Usage v#1 (Current mem = 1331.883M, initial mem = 394.918M) ***
+[08/29 21:59:53      7s] Set Default Input Pin Transition as 0.1 ps.
+[08/29 21:59:53      7s] Extraction setup Started 
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] Summary of Active RC-Corners : 
+[08/29 21:59:53      7s]  
+[08/29 21:59:53      7s]  Analysis View: default_emulate_view
+[08/29 21:59:53      7s]     RC-Corner Name        : default_emulate_rc_corner
+[08/29 21:59:53      7s]     RC-Corner Index       : 0
+[08/29 21:59:53      7s]     RC-Corner Temperature : 25 Celsius
+[08/29 21:59:53      7s]     RC-Corner Cap Table   : ''
+[08/29 21:59:53      7s]     RC-Corner PostRoute Res Factor        : 1
+[08/29 21:59:53      7s]     RC-Corner PostRoute Cap Factor        : 1
+[08/29 21:59:53      7s]     RC-Corner PostRoute XCap Factor       : 1
+[08/29 21:59:53      7s] Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+[08/29 21:59:53      7s] late library set: default_emulate_libset_max
+[08/29 21:59:53      7s] early library set: default_emulate_libset_min
+[08/29 21:59:53      7s] Completed consistency checks. Status: Successful
+[08/29 21:59:53      7s] Ending "SetAnalysisView" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1445.2M, current mem=1207.7M)
+[08/29 21:59:53      7s] Reading timing constraints file '/dev/null' ...
+[08/29 21:59:53      7s] Current (total cpu=0:00:07.9, real=0:00:28.0, peak res=1450.8M, current mem=1450.8M)
+[08/29 21:59:53      7s] Tech dependent Parameter, Build TLibAnalyzer for: cellAreaConsiderPadding
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) Begin ...
+[08/29 21:59:53      7s] Summary for sequential cells identification: 
+[08/29 21:59:53      7s]   Identified SBFF number: 116
+[08/29 21:59:53      7s]   Identified MBFF number: 0
+[08/29 21:59:53      7s]   Identified SB Latch number: 0
+[08/29 21:59:53      7s]   Identified MB Latch number: 0
+[08/29 21:59:53      7s]   Not identified SBFF number: 24
+[08/29 21:59:53      7s]   Not identified MBFF number: 0
+[08/29 21:59:53      7s]   Not identified SB Latch number: 0
+[08/29 21:59:53      7s]   Not identified MB Latch number: 0
+[08/29 21:59:53      7s]   Number of sequential cells which are not FFs: 38
+[08/29 21:59:53      7s] Total number of combinational cells: 265
+[08/29 21:59:53      7s] Total number of sequential cells: 178
+[08/29 21:59:53      7s] Total number of tristate cells: 18
+[08/29 21:59:53      7s] Total number of level shifter cells: 0
+[08/29 21:59:53      7s] Total number of power gating cells: 0
+[08/29 21:59:53      7s] Total number of isolation cells: 0
+[08/29 21:59:53      7s] Total number of power switch cells: 0
+[08/29 21:59:53      7s] Total number of pulse generator cells: 0
+[08/29 21:59:53      7s] Total number of always on buffers: 0
+[08/29 21:59:53      7s] Total number of retention cells: 0
+[08/29 21:59:53      7s] List of usable buffers: BUFX1 BUFX12 BUFX16 BUFX2 BUFX20 BUFX3 BUFX4 BUFX8 BUFXL CLKBUFX1 CLKBUFX12 CLKBUFX16 CLKBUFX2 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX8 CLKBUFXL
+[08/29 21:59:53      7s] Total number of usable buffers: 18
+[08/29 21:59:53      7s] List of unusable buffers:
+[08/29 21:59:53      7s] Total number of unusable buffers: 0
+[08/29 21:59:53      7s] List of usable inverters: CLKINVX1 CLKINVX12 CLKINVX16 CLKINVX2 CLKINVX20 CLKINVX3 CLKINVX4 CLKINVX8 CLKINVXL INVX1 INVX12 INVX16 INVX2 INVX20 INVX3 INVX4 INVXL INVX8
+[08/29 21:59:53      7s] Total number of usable inverters: 18
+[08/29 21:59:53      7s] List of unusable inverters: RFRDX1 RFRDX4 RFRDX2
+[08/29 21:59:53      7s] Total number of unusable inverters: 3
+[08/29 21:59:53      7s] List of identified usable delay cells: DLY1X1 DLY2X1 DLY4X1 DLY3X1
+[08/29 21:59:53      7s] Total number of identified usable delay cells: 4
+[08/29 21:59:53      7s] List of identified unusable delay cells:
+[08/29 21:59:53      7s] Total number of identified unusable delay cells: 0
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) End ...
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] TimeStamp Deleting Cell Server Begin ...
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] TimeStamp Deleting Cell Server End ...
+[08/29 21:59:53      7s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1481.0M, current mem=1480.9M)
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) Begin ...
+[08/29 21:59:53      7s] Summary for sequential cells identification: 
+[08/29 21:59:53      7s]   Identified SBFF number: 116
+[08/29 21:59:53      7s]   Identified MBFF number: 0
+[08/29 21:59:53      7s]   Identified SB Latch number: 0
+[08/29 21:59:53      7s]   Identified MB Latch number: 0
+[08/29 21:59:53      7s]   Not identified SBFF number: 24
+[08/29 21:59:53      7s]   Not identified MBFF number: 0
+[08/29 21:59:53      7s]   Not identified SB Latch number: 0
+[08/29 21:59:53      7s]   Not identified MB Latch number: 0
+[08/29 21:59:53      7s]   Number of sequential cells which are not FFs: 38
+[08/29 21:59:53      7s]  Visiting view : default_emulate_view
+[08/29 21:59:53      7s]    : PowerDomain = none : Weighted F : unweighted  = 47.30 (1.000) with rcCorner = 0
+[08/29 21:59:53      7s]    : PowerDomain = none : Weighted F : unweighted  = 47.30 (1.000) with rcCorner = -1
+[08/29 21:59:53      7s]  Visiting view : default_emulate_view
+[08/29 21:59:53      7s]    : PowerDomain = none : Weighted F : unweighted  = 47.30 (1.000) with rcCorner = 0
+[08/29 21:59:53      7s]    : PowerDomain = none : Weighted F : unweighted  = 47.30 (1.000) with rcCorner = -1
+[08/29 21:59:53      7s] TLC MultiMap info (StdDelay):
+[08/29 21:59:53      7s]   : default_emulate_delay_corner + default_emulate_libset_max + 1 + no RcCorner := 47.3ps
+[08/29 21:59:53      7s]   : default_emulate_delay_corner + default_emulate_libset_max + 1 + default_emulate_rc_corner := 47.3ps
+[08/29 21:59:53      7s]  Setting StdDelay to: 47.3ps
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) End ...
+[08/29 21:59:53      7s] Extraction setup Started 
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] Summary of Active RC-Corners : 
+[08/29 21:59:53      7s]  
+[08/29 21:59:53      7s]  Analysis View: default_emulate_view
+[08/29 21:59:53      7s]     RC-Corner Name        : default_emulate_rc_corner
+[08/29 21:59:53      7s]     RC-Corner Index       : 0
+[08/29 21:59:53      7s]     RC-Corner Temperature : 125 Celsius
+[08/29 21:59:53      7s]     RC-Corner Cap Table   : ''
+[08/29 21:59:53      7s]     RC-Corner PostRoute Res Factor        : 1
+[08/29 21:59:53      7s]     RC-Corner PostRoute Cap Factor        : 1
+[08/29 21:59:53      7s]     RC-Corner PostRoute XCap Factor       : 1
+[08/29 21:59:53      7s] Extraction setup Started 
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] Summary of Active RC-Corners : 
+[08/29 21:59:53      7s]  
+[08/29 21:59:53      7s]  Analysis View: default_emulate_view
+[08/29 21:59:53      7s]     RC-Corner Name        : default_emulate_rc_corner
+[08/29 21:59:53      7s]     RC-Corner Index       : 0
+[08/29 21:59:53      7s]     RC-Corner Temperature : 125 Celsius
+[08/29 21:59:53      7s]     RC-Corner Cap Table   : ''
+[08/29 21:59:53      7s]     RC-Corner PostRoute Res Factor        : 1
+[08/29 21:59:53      7s]     RC-Corner PostRoute Cap Factor        : 1
+[08/29 21:59:53      7s]     RC-Corner PostRoute XCap Factor       : 1
+[08/29 21:59:53      7s] Extraction setup Started 
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] 
+[08/29 21:59:53      7s] Trim Metal Layers:
+[08/29 21:59:53      7s] Summary of Active RC-Corners : 
+[08/29 21:59:53      7s]  
+[08/29 21:59:53      7s]  Analysis View: default_emulate_view
+[08/29 21:59:53      7s]     RC-Corner Name        : default_emulate_rc_corner
+[08/29 21:59:53      7s]     RC-Corner Index       : 0
+[08/29 21:59:53      7s]     RC-Corner Temperature : 125 Celsius
+[08/29 21:59:53      7s]     RC-Corner Cap Table   : ''
+[08/29 21:59:53      7s]     RC-Corner PostRoute Res Factor        : 1
+[08/29 21:59:53      7s]     RC-Corner PostRoute Cap Factor        : 1
+[08/29 21:59:53      7s]     RC-Corner PostRoute XCap Factor       : 1
+[08/29 21:59:59      8s] <CMD> read_sdc design_constraints.sdc
+[08/29 21:59:59      8s] ***  ***
+[08/29 21:59:59      8s] Current (total cpu=0:00:08.1, real=0:00:34.0, peak res=1481.8M, current mem=1443.1M)
+[08/29 21:59:59      8s] 
+[08/29 21:59:59      8s] Usage: create_clock [-help] [<sources>] [-add] [-comment <string>] [-name <clock_name>] -period <period_value> [-waveform <edge_list>]
+[08/29 21:59:59      8s] 
+[08/29 21:59:59      8s] **ERROR: (IMPTCM-48):	"#" is not a legal option for command "create_clock". Either the current option or an option prior to it is not specified correctly.
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File design_constraints.sdc, Line 5).
+[08/29 21:59:59      8s] 
+[08/29 21:59:59      8s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File design_constraints.sdc, Line 5).
+
+
+[08/29 21:59:59      8s] Usage: set_input_delay [-help] <delay_value> <port_or_pin_list> [-add_delay] [-clock <clock_name>] [-clock_fall] [-fall] [-level_sensitive] [-max] [-min] [-network_latency_included]
+[08/29 21:59:59      8s]                        [-reference_pin <pin_name>] [-rise] [-source_latency_included]
+[08/29 21:59:59      8s] 
+[08/29 21:59:59      8s] **ERROR: (IMPTCM-48):	"#" is not a legal option for command "set_input_delay". Either the current option or an option prior to it is not specified correctly.
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File design_constraints.sdc, Line 6).
+[08/29 21:59:59      8s] 
+[08/29 21:59:59      8s] **ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File design_constraints.sdc, Line 6).
+
+
+[08/29 21:59:59      8s] Usage: set_output_delay [-help] <delay_value> <port_or_pin_list> [-add_delay] [-clock <clock_name>] [-clock_fall] [-fall] [-group_path <group_name>] [-level_sensitive] [-max] [-min]
+[08/29 21:59:59      8s]                         [-network_latency_included] [-reference_pin <pin_name>] [-rise] [-source_latency_included]
+[08/29 21:59:59      8s] 
+[08/29 21:59:59      8s] **ERROR: (IMPTCM-48):	"#" is not a legal option for command "set_output_delay". Either the current option or an option prior to it is not specified correctly.
+**ERROR: (TCLCMD-1313):	Unsupported extra argument '#' in command 'set_false_path'.Use command help for proper usage information. (File design_constraints.sdc, Line 9).
+
+INFO (CTE): Reading of timing constraints file design_constraints.sdc completed, with 2 Warnings and 6 Errors.
+[08/29 22:00:00      8s] Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:01.0, peak res=1446.5M, current mem=1446.5M)
+[08/29 22:00:00      8s] Current (total cpu=0:00:08.1, real=0:00:35.0, peak res=1481.8M, current mem=1446.5M)
+[08/29 22:00:46      8s] <CMD> read_sdc design_constraints.sdc
+[08/29 22:00:46      8s] ***  ***
+[08/29 22:00:46      8s] Current (total cpu=0:00:08.1, real=0:01:21, peak res=1481.8M, current mem=1446.5M)
+[08/29 22:00:46      8s] INFO (CTE): Constraints read successfully.
+[08/29 22:00:46      8s] Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1455.8M, current mem=1455.8M)
+[08/29 22:00:46      8s] Current (total cpu=0:00:08.1, real=0:01:21, peak res=1481.8M, current mem=1455.8M)
+[08/29 22:00:54      8s] <CMD> report_timing
+[08/29 22:00:54      8s] AAE_INFO: opIsDesignInPostRouteState() is 0
+[08/29 22:00:54      8s] AAE DB initialization (MEM=1649.35 CPU=0:00:00.0 REAL=0:00:00.0) 
+[08/29 22:00:54      8s] #################################################################################
+[08/29 22:00:54      8s] # Design Name: four_bit_adder_reg_to_reg
+[08/29 22:00:54      8s] # Design Mode: 65nm
+[08/29 22:00:54      8s] # Analysis Mode: MMMC OCV 
+[08/29 22:00:54      8s] # Parasitics Mode: No SPEF/RCDB 
+[08/29 22:00:54      8s] # Signoff Settings: SI Off 
+[08/29 22:00:54      8s] #################################################################################
+[08/29 22:00:54      8s] Topological Sorting (REAL = 0:00:00.0, MEM = 1680.9M, InitMEM = 1680.9M)
+[08/29 22:00:54      8s] Start delay calculation (fullDC) (1 T). (MEM=1680.89)
+[08/29 22:00:54      8s] 
+[08/29 22:00:54      8s] Trim Metal Layers:
+[08/29 22:00:54      8s] 
+[08/29 22:00:54      8s] Trim Metal Layers:
+[08/29 22:00:54      8s] 
+[08/29 22:00:54      8s] Trim Metal Layers:
+[08/29 22:00:54      8s] 
+[08/29 22:00:54      8s] Trim Metal Layers:
+[08/29 22:00:54      8s] Start AAE Lib Loading. (MEM=1680.89)
+[08/29 22:00:54      8s] End AAE Lib Loading. (MEM=1699.97 CPU=0:00:00.0 Real=0:00:00.0)
+[08/29 22:00:54      8s] End AAE Lib Interpolated Model. (MEM=1699.97 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[08/29 22:00:54      8s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[08/29 22:00:54      8s] End delay calculation. (MEM=1778.43 CPU=0:00:00.0 REAL=0:00:00.0)
+[08/29 22:00:54      8s] End delay calculation (fullDC). (MEM=1778.43 CPU=0:00:00.0 REAL=0:00:00.0)
+[08/29 22:00:54      8s] *** CDM Built up (cpu=0:00:00.1  real=0:00:00.0  mem= 1778.4M) ***
+[08/29 22:03:53      8s] <CMD> read_lib ../design_files/slow.lib
+[08/29 22:03:53      8s] **ERROR: (UI-2004):	Can not read_lib because design is already loaded, skip this read_lib command.
+[08/29 22:04:02      8s] <CMD> read_verilog synthesized_design.v
+[08/29 22:04:02      8s] **ERROR: (UI-2004):	Can not read_verilog because design is already loaded, skip this read_verilog command.
+[08/29 22:04:43      8s] invalid command name "reset_design"
+[08/29 22:04:54      8s] <CMD> read_sdc design_constraints.sdc
+[08/29 22:04:54      8s] ***  ***
+[08/29 22:04:54      8s] Current (total cpu=0:00:08.9, real=0:05:29, peak res=1500.1M, current mem=1440.3M)
+[08/29 22:04:54      8s] **WARN: (TCLCMD-1594):	A clock with name clk was already defined in the design. Previously defined clock definition of clk will be overwritten. (File design_constraints.sdc, Line 2).
+[08/29 22:04:54      8s] 
+[08/29 22:04:54      8s] **WARN: (TCLCMD-958):	Previously defined source objects for clock 'clk' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File design_constraints.sdc, Line 2).
+[08/29 22:04:54      8s] 
+[08/29 22:04:54      8s] INFO (CTE): Reading of timing constraints file design_constraints.sdc completed, with 2 WARNING
+[08/29 22:04:54      8s] Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1440.3M, current mem=1414.9M)
+[08/29 22:04:54      8s] Current (total cpu=0:00:08.9, real=0:05:29, peak res=1500.1M, current mem=1414.9M)
+[08/29 22:05:01      8s] <CMD> report_timing
+[08/29 22:05:01      8s] AAE_INFO: opIsDesignInPostRouteState() is 0
+[08/29 22:05:01      8s] #################################################################################
+[08/29 22:05:01      8s] # Design Name: four_bit_adder_reg_to_reg
+[08/29 22:05:01      8s] # Design Mode: 65nm
+[08/29 22:05:01      8s] # Analysis Mode: MMMC OCV 
+[08/29 22:05:01      8s] # Parasitics Mode: No SPEF/RCDB 
+[08/29 22:05:01      8s] # Signoff Settings: SI Off 
+[08/29 22:05:01      8s] #################################################################################
+[08/29 22:05:01      8s] Topological Sorting (REAL = 0:00:00.0, MEM = 1735.0M, InitMEM = 1735.0M)
+[08/29 22:05:01      8s] Start delay calculation (fullDC) (1 T). (MEM=1734.95)
+[08/29 22:05:01      8s] End AAE Lib Interpolated Model. (MEM=1734.95 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[08/29 22:05:01      8s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[08/29 22:05:01      8s] End delay calculation. (MEM=1787.72 CPU=0:00:00.0 REAL=0:00:00.0)
+[08/29 22:05:01      8s] End delay calculation (fullDC). (MEM=1787.72 CPU=0:00:00.0 REAL=0:00:00.0)
+[08/29 22:05:01      8s] *** CDM Built up (cpu=0:00:00.1  real=0:00:00.0  mem= 1787.7M) ***
+[08/29 22:05:44      9s] <CMD> read_verilog synthesized_design.v
+[08/29 22:05:44      9s] **ERROR: (UI-2004):	Can not read_verilog because design is already loaded, skip this read_verilog command.
+[08/29 22:05:50      9s] <CMD> read_sdc design_constraints.sdc
+[08/29 22:05:50      9s] ***  ***
+[08/29 22:05:50      9s] Current (total cpu=0:00:09.2, real=0:06:25, peak res=1501.2M, current mem=1445.3M)
+[08/29 22:05:50      9s] **WARN: (TCLCMD-1594):	A clock with name clk was already defined in the design. Previously defined clock definition of clk will be overwritten. (File design_constraints.sdc, Line 2).
+[08/29 22:05:50      9s] 
+[08/29 22:05:50      9s] **WARN: (TCLCMD-958):	Previously defined source objects for clock 'clk' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File design_constraints.sdc, Line 2).
+[08/29 22:05:50      9s] 
+[08/29 22:05:50      9s] INFO (CTE): Reading of timing constraints file design_constraints.sdc completed, with 2 WARNING
+[08/29 22:05:50      9s] Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1445.3M, current mem=1419.9M)
+[08/29 22:05:50      9s] Current (total cpu=0:00:09.2, real=0:06:25, peak res=1501.2M, current mem=1419.9M)
+[08/29 22:05:52      9s] <CMD> report_timing
+[08/29 22:05:52      9s] AAE_INFO: opIsDesignInPostRouteState() is 0
+[08/29 22:05:52      9s] #################################################################################
+[08/29 22:05:52      9s] # Design Name: four_bit_adder_reg_to_reg
+[08/29 22:05:52      9s] # Design Mode: 65nm
+[08/29 22:05:52      9s] # Analysis Mode: MMMC OCV 
+[08/29 22:05:52      9s] # Parasitics Mode: No SPEF/RCDB 
+[08/29 22:05:52      9s] # Signoff Settings: SI Off 
+[08/29 22:05:52      9s] #################################################################################
+[08/29 22:05:52      9s] Topological Sorting (REAL = 0:00:00.0, MEM = 1743.2M, InitMEM = 1743.2M)
+[08/29 22:05:52      9s] Start delay calculation (fullDC) (1 T). (MEM=1743.24)
+[08/29 22:05:52      9s] End AAE Lib Interpolated Model. (MEM=1743.24 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[08/29 22:05:52      9s] End Timing Check Calculation. (CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[08/29 22:05:52      9s] End delay calculation. (MEM=1790.94 CPU=0:00:00.0 REAL=0:00:00.0)
+[08/29 22:05:52      9s] End delay calculation (fullDC). (MEM=1790.94 CPU=0:00:00.0 REAL=0:00:00.0)
+[08/29 22:05:52      9s] *** CDM Built up (cpu=0:00:00.1  real=0:00:00.0  mem= 1790.9M) ***
+[08/30 00:12:58     10s] <CMD> report_timing -npaths 10000
+[08/30 00:12:58     10s] **ERROR: (TCLCMD-981):	Unsupported extra argument '-npaths' in command 'report_timing'.
+**ERROR: (TCLCMD-981):	Unsupported extra argument '10000' in command 'report_timing'.
+
+[08/30 00:13:32     10s] <CMD> report_timing -max_paths 10000
+[08/30 00:14:43     10s] <CMD> report_timing -max_paths 5
+[08/30 01:31:10     10s] 
+[08/30 01:31:10     10s] *** Memory Usage v#1 (Current mem = 1742.938M, initial mem = 394.918M) ***
+[08/30 01:31:10     10s] 
+[08/30 01:31:10     10s] *** Summary of all messages that are not suppressed in this session:
+[08/30 01:31:10     10s] Severity  ID               Count  Summary                                  
+[08/30 01:31:10     10s] ERROR     UI-2004              3  %s design is already loaded, skip this %...
+[08/30 01:31:10     10s] ERROR     IMPTCM-48            3  "%s" is not a legal option for command "...
+[08/30 01:31:10     10s] WARNING   TCLCMD-513           2  The software could not find a matching o...
+[08/30 01:31:10     10s] ERROR     TCLCMD-917           2  Cannot find '%s' that match '%s'         
+[08/30 01:31:10     10s] WARNING   TCLCMD-958           2  Previously defined source objects for cl...
+[08/30 01:31:10     10s] ERROR     TCLCMD-981           2  Unsupported extra argument '%s' in comma...
+[08/30 01:31:10     10s] ERROR     TCLCMD-1313          1  Unsupported extra argument '%s' in comma...
+[08/30 01:31:10     10s] WARNING   TCLCMD-1594          2  A clock with name %s was already defined...
+[08/30 01:31:10     10s] WARNING   TECHLIB-302          1  No function defined for cell '%s'. The c...
+[08/30 01:31:10     10s] *** Message Summary: 7 warning(s), 11 error(s)
+[08/30 01:31:10     10s] 
+[08/30 01:31:10     10s] --- Ending "Tempus Timing Signoff Solution" (totcpu=0:00:10.9, real=3:31:45, mem=1742.9M) ---

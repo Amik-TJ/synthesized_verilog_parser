@@ -1,0 +1,49 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2016 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: GENUS15.22 - 15.20-s024_1, built Thu Apr 14 2016
+Options: 
+Date:    Wed May 25 18:59:49 2022
+Host:    kphost.kpdomain (x86_64 w/Linux 3.10.0-862.9.1.el7.x86_64) (1*AMD Ryzen 5 4600H with Radeon Graphics 512KB)
+OS:      CentOS Linux release 7.5.1804 (Core) 
+
+Checking out license: Genus_Synthesis
+
+Loading tool scripts...
+Sourcing GUI preferences file /home/kp/.cadence/genus/gui.tcl...
+Finished loading tool scripts (5 seconds elapsed).
+
+WARNING: This version of the tool is 2232 days old.
+genus@root:> read_lib slow.lb
+Error   : File error. [FILE-100] [::legacy::set_attribute]
+        : Cannot open file 'slow.lb'
+        : Make sure that the file is a readable regular file and has the specified name.
+Error   : A library file does not exist. [LBR-68] [::legacy::set_attribute]
+        : File 'slow.lb ' could not be found. File '<none>' was the last file that was successfully read in.
+        : Make sure that the library file exists or check for a typo in the file name.
+Error   : The data value for this attribute is invalid. [TUI-24] [::legacy::set_attribute]
+        : The value '  { slow.lb } ' cannot be set for attribute 'library'.
+        : To see the usage/description for this attribute, type '::legacy::set_attribute -h <attr_name> *'.
+1
+genus@root:> read_libs slow.lib
+
+  Message Summary for Library slow.lib:
+  *************************************
+  Could not find an attribute in the library. [LBR-436]: 639
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  An unsupported construct was detected in this library. [LBR-40]: 1
+  *************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.620000, 125.000000) in library 'slow.lib'.
+        : The nominal operating condition represents either the nominal PVT values if specified in the library source, or the default PVT values (1.0, 1.0, 1.0).
+timing_condition:default_emulate_timing_cond_min
+genus@root:> read_hdl ha.v
+Info    : Message severity has been changed from default value. [MESG-7]
+        : Message 'VLOGPT-650' default severity is 'Warning'
+Error   : Cannot open file. [VLOGPT-650] [read_hdl]
+        : File 'ha.v'.
+        : The specified file could not be opened.  Check the value of the init_hdl_search_path attribute.
+1

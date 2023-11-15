@@ -1,0 +1,8 @@
+not
+and
+or
+nand
+nor
+xor
+xnor
+buf

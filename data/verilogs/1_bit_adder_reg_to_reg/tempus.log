@@ -1,0 +1,80 @@
+Path 1: VIOLATED Late External Delay Assertion 
+Endpoint:   carry_out       (^) checked with  leading edge of 'clk'
+Beginpoint: carry_out_reg/Q (^) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- External Delay                1.000
++ Phase Shift                   1.000
+= Required Time                 0.000
+- Arrival Time                  0.326
+= Slack Time                   -0.326
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      --------------------------------------------------------------
+      Instance       Arc          Cell      Delay  Arrival  Required  
+                                                   Time     Time  
+      --------------------------------------------------------------
+      carry_out_reg  CK ^         -         -      0.000    -0.326  
+      carry_out_reg  CK ^ -> Q ^  DFFRHQX1  0.326  0.326    0.000  
+      -              carry_out ^  -         0.000  0.326    0.000  
+      --------------------------------------------------------------
+Path 2: MET Setup Check with Pin sum_out_reg/CK 
+Endpoint:   sum_out_reg/D (v) checked with  leading edge of 'clk'
+Beginpoint: A_reg_reg/Q   (v) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.375
++ Phase Shift                   1.000
+= Required Time                 0.625
+- Arrival Time                  0.546
+= Slack Time                    0.079
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ------------------------------------------------------------
+      Instance     Arc          Cell      Delay  Arrival  Required  
+                                                 Time     Time  
+      ------------------------------------------------------------
+      A_reg_reg    CK ^         -         -      0.000    0.079  
+      A_reg_reg    CK ^ -> Q v  DFFRHQX1  0.290  0.290    0.369  
+      g33          A v -> S v   ADDHXL    0.255  0.546    0.625  
+      sum_out_reg  D v          DFFRHQX1  0.000  0.546    0.625  
+      ------------------------------------------------------------
+Path 3: MET Setup Check with Pin carry_out_reg/CK 
+Endpoint:   carry_out_reg/D (v) checked with  leading edge of 'clk'
+Beginpoint: A_reg_reg/Q     (v) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.358
++ Phase Shift                   1.000
+= Required Time                 0.642
+- Arrival Time                  0.463
+= Slack Time                    0.179
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      --------------------------------------------------------------
+      Instance       Arc          Cell      Delay  Arrival  Required  
+                                                   Time     Time  
+      --------------------------------------------------------------
+      A_reg_reg      CK ^         -         -      0.000    0.179  
+      A_reg_reg      CK ^ -> Q v  DFFRHQX1  0.290  0.290    0.469  
+      g33            A v -> CO v  ADDHXL    0.173  0.463    0.642  
+      carry_out_reg  D v          DFFRHQX1  0.000  0.463    0.642  
+      --------------------------------------------------------------
+Path 4: MET Setup Check with Pin A_reg_reg/CK 
+Endpoint:   A_reg_reg/D (v) checked with  leading edge of 'clk'
+Beginpoint: A_in        (v) triggered by  leading edge of '@'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.348
++ Phase Shift                   1.000
+= Required Time                 0.652
+- Arrival Time                  0.000
+= Slack Time                    0.652
+     Clock Rise Edge                      0.000
+     + Input Delay                        0.000
+     = Beginpoint Arrival Time            0.000
+      -----------------------------------------------------
+      Instance   Arc     C

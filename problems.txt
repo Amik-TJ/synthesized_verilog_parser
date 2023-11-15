@@ -1,0 +1,10 @@
+# parse the lib file to know the output and inputs
+
+
+My Folder structure:
+
+src:
+- grapher
+-- grapher.py
+-verilog_parser_engine
+--

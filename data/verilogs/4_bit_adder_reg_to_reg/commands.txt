@@ -1,0 +1,28 @@
+# tcsh
+# source /CMC/scripts/cadence.genus20.10.000.csh
+# genus
+# read_lib ../design_files/slow.lib 
+# read_hdl four_bit_adder_reg_to_reg.v
+# elaborate four_bit_adder_reg_to_reg (essentially the module name inside the file)
+# synthesize -to_mapped
+# write -mapped > synthesized_design.v
+
+
+
+
+
+Tempus
+----------------------------------------------
+# tcsh
+# source /CMC/scripts/cadence.ssv21.14.000.csh 
+# Type tempus
+# read_lib ../design_files/slow.lib  
+# read_verilog synthesized_design.v (genereated from RTL synthesis)
+# set_top_module four_bit_adder_reg_to_reg (essentially the module name inside the file)
+# read_sdc design_constraints.sdc
+# report_timing
+# report_timing -max_paths 10000
+
+
+
+
