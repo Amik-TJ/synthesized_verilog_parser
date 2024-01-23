@@ -10,15 +10,20 @@ parent_directory = os.path.dirname(current_directory)
 sys.path.append(parent_directory)
 
 
+
+def read_parsed_lib_from_json(parsed_lib_json_path):
+    with open(parsed_lib_json_path, 'r') as file:
+        return json.load(file)
+
+
+
 def read_gate_names_from_txt(unique_gate_names_file_path):
     with open(unique_gate_names_file_path, 'r') as file:
         gate_names = [line.strip() for line in file.readlines()]
     return gate_names
 
 
-def read_parsed_lib_from_json(parsed_lib_json_path):
-    with open(parsed_lib_json_path, 'r') as file:
-        return json.load(file)
+
     
 
 def extract_input_outputs(line):
@@ -74,7 +79,7 @@ def verilog_parser(synthesized_verilog_path, parsed_lib_json_path, verbose=0):
     _input, _outputs = [], []
                                     # tail and head are the nodes to which the edge is connected to
 
-
+    gate_type_and_name_mapping = {}
 
 
     if not os.path.exists(synthesized_verilog_path):
@@ -154,7 +159,6 @@ def verilog_parser(synthesized_verilog_path, parsed_lib_json_path, verbose=0):
 
 
         elif (any(g in line for g in available_gates)):
-         
             gate_type = line.split(' ')[0]
             # remove gate type (gate instantiation) from line. The first word
             stri = ''
@@ -172,8 +176,8 @@ def verilog_parser(synthesized_verilog_path, parsed_lib_json_path, verbose=0):
             # Split the line into two parts. Second part should contain the interconnections
             line = line[index:].strip()                                         # line contains: i.e -> (.RN(n_12), .CK(clk), .D(n_11), .Q(sum_out[3]))
             gates.append(gate)
+            gate_type_and_name_mapping[gate] = gate_type
 
-            
 
             # input, output processing
             
@@ -206,15 +210,15 @@ def verilog_parser(synthesized_verilog_path, parsed_lib_json_path, verbose=0):
                     if(flag == 0):
                         wires.append([_output, gate, []])
             
-                print('-------------------------------')  
-                print('-------------------------------')  
-                print(f'gate         : {gate}')
-                print(f'_input       : {_input}')
-                print(f'_output      : {_output}')
-                print(f'output_nodes : {output_nodes}')
-                print(f'wires        : {wires[-1]}')
-                print('-------------------------------')  
-                print()     
+                # print('-------------------------------')
+                # print('-------------------------------')
+                # print(f'gate         : {gate}')
+                # print(f'_input       : {_input}')
+                # print(f'_output      : {_output}')
+                # print(f'output_nodes : {output_nodes}')
+                # print(f'wires        : {wires[-1]}')
+                # print('-------------------------------')
+                # print()
 
                          
             
@@ -253,7 +257,7 @@ def verilog_parser(synthesized_verilog_path, parsed_lib_json_path, verbose=0):
                         # print()
                         wires.append([i, ' ', [gate]])
 
-        
+
 
     if (verbose):
 
@@ -291,4 +295,4 @@ def verilog_parser(synthesized_verilog_path, parsed_lib_json_path, verbose=0):
         
 
     
-    return input_nodes, output_nodes, gates, wires
+    return input_nodes, output_nodes, gates, wires, gate_type_and_name_mapping

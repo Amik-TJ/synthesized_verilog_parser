@@ -23,6 +23,12 @@ verilog_dict = {
         'tempus_sta_log_file_directory' : 'data/verilogs/test_verilog/tempus.log',
         'parsed_lib_json_path' : 'data/outputs/tsmc_180_slow_parsed_library_file.json',
     },
+    3 : {
+        'name' : '16_bit_adder_reg_to_reg',
+        'synthesized_verilog_path'      : 'data/verilogs/16_bit_adder_reg_to_reg/synthesized_design.v',
+        'tempus_sta_log_file_directory' : 'data/verilogs/1_bit_adder_reg_to_reg/tempus.log',
+        'parsed_lib_json_path' : 'data/outputs/tsmc_180_slow_parsed_library_file.json',
+    },
 
 }
 
@@ -40,11 +46,11 @@ def main():
 
 
     # Node Edge Extration from synthesized design
-    in_n, out_n, nodes, edges = verilog_parser(synthesized_verilog_path = synthesized_verilog_path, parsed_lib_json_path = parsed_lib_json_path, verbose=verbose)
+    in_n, out_n, nodes, edges, gate_type_and_name_mapping = verilog_parser(synthesized_verilog_path = synthesized_verilog_path, parsed_lib_json_path = parsed_lib_json_path, verbose=verbose)
     
 
     # Graph Generation
-    grapher(in_n, out_n, nodes, edges, verbose=verbose)
+    grapher(in_n, out_n, nodes, edges, gate_type_and_name_mapping, parsed_lib_json_path, verbose)
     sta_label_parser(tempus_sta_log_file_directory)
 
 if __name__ == "__main__":

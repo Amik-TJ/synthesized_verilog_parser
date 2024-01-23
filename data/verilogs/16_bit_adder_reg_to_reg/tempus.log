@@ -1,0 +1,878 @@
+
+Cadence Tempus(TM) Timing Signoff Solution.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.14-s111_1, built Fri Jul 15 10:03:25 PDT 2022
+Options:	
+Date:		Tue Aug 29 21:59:25 2023
+Host:		thinker (x86_64 w/Linux 4.18.0-477.21.1.el8_8.x86_64) (16cores*24cpus*12th Gen Intel(R) Core(TM) i9-12900F 30720KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		[21:59:25.217025] Configured Lic search path (21.01-s002): /CMC/tools/licenses/cadence.license
+
+		tpsxl	Tempus Timing Signoff Solution XL	21.1	checkout succeeded
+		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+**WARN: (IMPSYT-1507):	The display is invalid and will start in no window mode
+Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_1307693_DZaphq'.
+<CMD> read_lib ../design_files/slow.lib
+<CMD> read_verilog synthesized_design.v
+<CMD> set_top_module four_bit_adder_reg_to_reg
+***  ***
+#% Begin Load MMMC data ... (date=08/29 21:59:52, mem=819.3M)
+Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+#% End Load MMMC data ... (date=08/29 21:59:52, total cpu=0:00:00.0, real=0:00:00.0, peak res=820.2M, current mem=820.2M)
+default_emulate_early_rc_corner default_emulate_late_rc_corner default_emulate_rc_corner
+*** Loading design ... ***
+Loading view definition file from .ssv_emulate_view_definition_1307693.tcl
+Reading default_emulate_libset_max timing library '/data/user/famik/data/rtl_synthesis/design_files/slow.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'HOLDX1'. The cell will only be used for analysis. (File /data/user/famik/data/rtl_synthesis/design_files/slow.lib)
+Read 462 cells in library 'tsmc18' 
+*** End library_loading (cpu=0.00min, real=0.02min, mem=34.5M, fe_cpu=0.12min, fe_real=0.47min, fe_mem=808.4M) ***
+#% Begin Load netlist data ... (date=08/29 21:59:53, mem=826.8M)
+*** Begin netlist parsing (mem=808.4M) ***
+Reading verilog netlist 'synthesized_design.v'
+
+*** Memory Usage v#1 (Current mem = 972.438M, initial mem = 394.918M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=972.4M) ***
+#% End Load netlist data ... (date=08/29 21:59:53, total cpu=0:00:00.2, real=0:00:00.0, peak res=939.1M, current mem=931.1M)
+Set top cell to four_bit_adder_reg_to_reg.
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Building hierarchical netlist for Cell four_bit_adder_reg_to_reg ...
+***** UseNewTieNetMode *****.
+*** Netlist is unique.
+** info: there are 463 modules.
+** info: there are 24 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 1331.883M, initial mem = 394.918M) ***
+Set Default Input Pin Transition as 0.1 ps.
+/dev/null
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Reading timing constraints file '/dev/null' ...
+Current (total cpu=0:00:07.9, real=0:00:28.0, peak res=1450.8M, current mem=1450.8M)
+Total number of combinational cells: 265
+Total number of sequential cells: 178
+Total number of tristate cells: 18
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX1 BUFX12 BUFX16 BUFX2 BUFX20 BUFX3 BUFX4 BUFX8 BUFXL CLKBUFX1 CLKBUFX12 CLKBUFX16 CLKBUFX2 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX8 CLKBUFXL
+Total number of usable buffers: 18
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1 CLKINVX12 CLKINVX16 CLKINVX2 CLKINVX20 CLKINVX3 CLKINVX4 CLKINVX8 CLKINVXL INVX1 INVX12 INVX16 INVX2 INVX20 INVX3 INVX4 INVXL INVX8
+Total number of usable inverters: 18
+List of unusable inverters: RFRDX1 RFRDX4 RFRDX2
+Total number of unusable inverters: 3
+List of identified usable delay cells: DLY1X1 DLY2X1 DLY4X1 DLY3X1
+Total number of identified usable delay cells: 4
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+default_emulate_constraint_mode
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+default_emulate_libset_max default_emulate_libset_min
+<CMD> read_sdc design_constraints.sdc
+***  ***
+Current (total cpu=0:00:08.1, real=0:00:34.0, peak res=1481.8M, current mem=1443.1M)
+
+Usage: create_clock [-help] [<sources>] [-add] [-comment <string>] [-name <clock_name>] -period <period_value> [-waveform <edge_list>]
+
+**ERROR: (IMPTCM-48):	"#" is not a legal option for command "create_clock". Either the current option or an option prior to it is not specified correctly.
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File design_constraints.sdc, Line 5).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File design_constraints.sdc, Line 5).
+
+
+Usage: set_input_delay [-help] <delay_value> <port_or_pin_list> [-add_delay] [-clock <clock_name>] [-clock_fall] [-fall] [-level_sensitive] [-max] [-min] [-network_latency_included]
+                       [-reference_pin <pin_name>] [-rise] [-source_latency_included]
+
+**ERROR: (IMPTCM-48):	"#" is not a legal option for command "set_input_delay". Either the current option or an option prior to it is not specified correctly.
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'clk' (File design_constraints.sdc, Line 6).
+
+**ERROR: (TCLCMD-917):	Cannot find 'clocks' that match 'clk' (File design_constraints.sdc, Line 6).
+
+
+Usage: set_output_delay [-help] <delay_value> <port_or_pin_list> [-add_delay] [-clock <clock_name>] [-clock_fall] [-fall] [-group_path <group_name>] [-level_sensitive] [-max] [-min]
+                        [-network_latency_included] [-reference_pin <pin_name>] [-rise] [-source_latency_included]
+
+**ERROR: (IMPTCM-48):	"#" is not a legal option for command "set_output_delay". Either the current option or an option prior to it is not specified correctly.
+**ERROR: (TCLCMD-1313):	Unsupported extra argument '#' in command 'set_false_path'.Use command help for proper usage information. (File design_constraints.sdc, Line 9).
+
+INFO (CTE): Reading of timing constraints file design_constraints.sdc completed, with 2 Warnings and 6 Errors.
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:01.0, peak res=1446.5M, current mem=1446.5M)
+Current (total cpu=0:00:08.1, real=0:00:35.0, peak res=1481.8M, current mem=1446.5M)
+<CMD> read_sdc design_constraints.sdc
+***  ***
+Current (total cpu=0:00:08.1, real=0:01:21, peak res=1481.8M, current mem=1446.5M)
+INFO (CTE): Constraints read successfully.
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1455.8M, current mem=1455.8M)
+Current (total cpu=0:00:08.1, real=0:01:21, peak res=1481.8M, current mem=1455.8M)
+<CMD> report_timing
+AAE_INFO: opIsDesignInPostRouteState() is 0
+AAE DB initialization (MEM=1649.35 CPU=0:00:00.0 REAL=0:00:00.0) 
+#################################################################################
+# Design Name: four_bit_adder_reg_to_reg
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Start delay calculation (fullDC) (1 T). (MEM=1680.89)
+/dev/null
+End delay calculation. (MEM=1778.43 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1778.43 CPU=0:00:00.0 REAL=0:00:00.0)
+Path 1: MET Setup Check with Pin A_reg_reg[2]/CK 
+Endpoint:   A_reg_reg[2]/D (v) checked with  leading edge of 'clk'
+Beginpoint: A_in[2]        (v) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.348
++ Phase Shift                  10.000
+= Required Time                 9.652
+- Arrival Time                  2.000
+= Slack Time                    7.652
+     Clock Rise Edge                      0.000
+     + Input Delay                        2.000
+     = Beginpoint Arrival Time            2.000
+      -----------------------------------------------------------
+      Instance      Arc        Cell      Delay  Arrival  Required  
+                                                Time     Time  
+      -----------------------------------------------------------
+      -             A_in[2] v  -         -      2.000    9.652  
+      A_reg_reg[2]  D v        DFFRHQX1  0.000  2.000    9.652  
+      -----------------------------------------------------------
+
+<CMD> read_lib ../design_files/slow.lib
+**ERROR: (UI-2004):	Can not read_lib because design is already loaded, skip this read_lib command.
+<CMD> read_verilog synthesized_design.v
+**ERROR: (UI-2004):	Can not read_verilog because design is already loaded, skip this read_verilog command.
+invalid command name "reset_design"
+<CMD> read_sdc design_constraints.sdc
+***  ***
+Current (total cpu=0:00:08.9, real=0:05:29, peak res=1500.1M, current mem=1440.3M)
+**WARN: (TCLCMD-1594):	A clock with name clk was already defined in the design. Previously defined clock definition of clk will be overwritten. (File design_constraints.sdc, Line 2).
+
+**WARN: (TCLCMD-958):	Previously defined source objects for clock 'clk' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File design_constraints.sdc, Line 2).
+
+INFO (CTE): Reading of timing constraints file design_constraints.sdc completed, with 2 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1440.3M, current mem=1414.9M)
+Current (total cpu=0:00:08.9, real=0:05:29, peak res=1500.1M, current mem=1414.9M)
+<CMD> report_timing
+AAE_INFO: opIsDesignInPostRouteState() is 0
+#################################################################################
+# Design Name: four_bit_adder_reg_to_reg
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Start delay calculation (fullDC) (1 T). (MEM=1734.95)
+End delay calculation. (MEM=1787.72 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1787.72 CPU=0:00:00.0 REAL=0:00:00.0)
+Path 1: MET Setup Check with Pin sum_out_reg[3]/CK 
+Endpoint:   sum_out_reg[3]/D (v) checked with  leading edge of 'clk'
+Beginpoint: B_reg_reg[0]/Q   (^) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.371
++ Phase Shift                   5.000
+= Required Time                 4.629
+- Arrival Time                  1.380
+= Slack Time                    3.249
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ----------------------------------------------------------------
+      Instance        Arc           Cell      Delay  Arrival  Required  
+                                                     Time     Time  
+      ----------------------------------------------------------------
+      B_reg_reg[0]    CK ^          -         -      0.000    3.249  
+      B_reg_reg[0]    CK ^ -> Q ^   DFFRHQX1  0.393  0.393    3.642  
+      g214            A ^ -> Y v    NAND2XL   0.147  0.540    3.789  
+      g206            A0 v -> Y ^   OAI21XL   0.234  0.773    4.023  
+      g204            CI ^ -> CO ^  ADDFX2    0.329  1.102    4.352  
+      g202            CI ^ -> S v   ADDFX2    0.278  1.380    4.629  
+      sum_out_reg[3]  D v           DFFRHQX1  0.000  1.380    4.629  
+      ----------------------------------------------------------------
+
+<CMD> read_verilog synthesized_design.v
+**ERROR: (UI-2004):	Can not read_verilog because design is already loaded, skip this read_verilog command.
+<CMD> read_sdc design_constraints.sdc
+***  ***
+Current (total cpu=0:00:09.2, real=0:06:25, peak res=1501.2M, current mem=1445.3M)
+**WARN: (TCLCMD-1594):	A clock with name clk was already defined in the design. Previously defined clock definition of clk will be overwritten. (File design_constraints.sdc, Line 2).
+
+**WARN: (TCLCMD-958):	Previously defined source objects for clock 'clk' have been overwritten. To avoid overwrite, ensure that all source objects are passed to the 'create_clock' command at once. (File design_constraints.sdc, Line 2).
+
+INFO (CTE): Reading of timing constraints file design_constraints.sdc completed, with 2 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1445.3M, current mem=1419.9M)
+Current (total cpu=0:00:09.2, real=0:06:25, peak res=1501.2M, current mem=1419.9M)
+<CMD> report_timing
+AAE_INFO: opIsDesignInPostRouteState() is 0
+#################################################################################
+# Design Name: four_bit_adder_reg_to_reg
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Start delay calculation (fullDC) (1 T). (MEM=1743.24)
+End delay calculation. (MEM=1790.94 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1790.94 CPU=0:00:00.0 REAL=0:00:00.0)
+Path 1: VIOLATED Setup Check with Pin sum_out_reg[3]/CK 
+Endpoint:   sum_out_reg[3]/D (v) checked with  leading edge of 'clk'
+Beginpoint: B_reg_reg[0]/Q   (^) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.371
++ Phase Shift                   1.000
+= Required Time                 0.629
+- Arrival Time                  1.380
+= Slack Time                   -0.751
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ----------------------------------------------------------------
+      Instance        Arc           Cell      Delay  Arrival  Required  
+                                                     Time     Time  
+      ----------------------------------------------------------------
+      B_reg_reg[0]    CK ^          -         -      0.000    -0.751  
+      B_reg_reg[0]    CK ^ -> Q ^   DFFRHQX1  0.393  0.393    -0.358  
+      g214            A ^ -> Y v    NAND2XL   0.147  0.540    -0.211  
+      g206            A0 v -> Y ^   OAI21XL   0.234  0.773    0.023  
+      g204            CI ^ -> CO ^  ADDFX2    0.329  1.102    0.352  
+      g202            CI ^ -> S v   ADDFX2    0.278  1.380    0.629  
+      sum_out_reg[3]  D v           DFFRHQX1  0.000  1.380    0.629  
+      ----------------------------------------------------------------
+
+<CMD> report_timing -npaths 10000
+**ERROR: (TCLCMD-981):	Unsupported extra argument '-npaths' in command 'report_timing'.
+**ERROR: (TCLCMD-981):	Unsupported extra argument '10000' in command 'report_timing'.
+
+<CMD> report_timing -max_paths 10000
+Path 1: VIOLATED Setup Check with Pin sum_out_reg[3]/CK 
+Endpoint:   sum_out_reg[3]/D (v) checked with  leading edge of 'clk'
+Beginpoint: B_reg_reg[0]/Q   (^) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.371
++ Phase Shift                   1.000
+= Required Time                 0.629
+- Arrival Time                  1.380
+= Slack Time                   -0.751
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ----------------------------------------------------------------
+      Instance        Arc           Cell      Delay  Arrival  Required  
+                                                     Time     Time  
+      ----------------------------------------------------------------
+      B_reg_reg[0]    CK ^          -         -      0.000    -0.751  
+      B_reg_reg[0]    CK ^ -> Q ^   DFFRHQX1  0.393  0.393    -0.358  
+      g214            A ^ -> Y v    NAND2XL   0.147  0.540    -0.211  
+      g206            A0 v -> Y ^   OAI21XL   0.234  0.773    0.023  
+      g204            CI ^ -> CO ^  ADDFX2    0.329  1.102    0.352  
+      g202            CI ^ -> S v   ADDFX2    0.278  1.380    0.629  
+      sum_out_reg[3]  D v           DFFRHQX1  0.000  1.380    0.629  
+      ----------------------------------------------------------------
+Path 2: VIOLATED Setup Check with Pin carry_out_reg/CK 
+Endpoint:   carry_out_reg/D (v) checked with  leading edge of 'clk'
+Beginpoint: B_reg_reg[1]/Q  (v) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.370
++ Phase Shift                   1.000
+= Required Time                 0.630
+- Arrival Time                  1.308
+= Slack Time                   -0.679
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ---------------------------------------------------------------
+      Instance       Arc           Cell      Delay  Arrival  Required  
+                                                    Time     Time  
+      ---------------------------------------------------------------
+      B_reg_reg[1]   CK ^          -         -      0.000    -0.679  
+      B_reg_reg[1]   CK ^ -> Q v   DFFRHQX1  0.298  0.298    -0.380  
+      g213           B v -> Y ^    NOR2XL    0.175  0.473    -0.205  
+      g206           A1 ^ -> Y v   OAI21XL   0.148  0.621    -0.057  
+      g204           CI v -> CO v  ADDFX2    0.354  0.975    0.297  
+      g202           CI v -> CO v  ADDFX2    0.333  1.308    0.630  
+      carry_out_reg  D v           DFFRHQX1  0.000  1.308    0.630  
+      ---------------------------------------------------------------
+Path 3: VIOLATED Setup Check with Pin sum_out_reg[2]/CK 
+Endpoint:   sum_out_reg[2]/D (v) checked with  leading edge of 'clk'
+Beginpoint: B_reg_reg[0]/Q   (^) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.371
++ Phase Shift                   1.000
+= Required Time                 0.629
+- Arrival Time                  1.107
+= Slack Time                   -0.477
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ---------------------------------------------------------------
+      Instance        Arc          Cell      Delay  Arrival  Required  
+                                                    Time     Time  
+      ---------------------------------------------------------------
+      B_reg_reg[0]    CK ^         -         -      0.000    -0.477  
+      B_reg_reg[0]    CK ^ -> Q ^  DFFRHQX1  0.393  0.393    -0.084  
+      g214            A ^ -> Y v   NAND2XL   0.147  0.540    0.062  
+      g206            A0 v -> Y ^  OAI21XL   0.234  0.773    0.296  
+      g204            CI ^ -> S v  ADDFX2    0.333  1.107    0.629  
+      sum_out_reg[2]  D v          DFFRHQX1  0.000  1.107    0.629  
+      ---------------------------------------------------------------
+Path 4: VIOLATED Setup Check with Pin sum_out_reg[1]/CK 
+Endpoint:   sum_out_reg[1]/SE (^) checked with  leading edge of 'clk'
+Beginpoint: B_reg_reg[1]/Q    (v) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.798
++ Phase Shift                   1.000
+= Required Time                 0.202
+- Arrival Time                  0.648
+= Slack Time                   -0.446
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ----------------------------------------------------------------
+      Instance        Arc          Cell       Delay  Arrival  Required  
+                                                     Time     Time  
+      ----------------------------------------------------------------
+      B_reg_reg[1]    CK ^         -          -      0.000    -0.446  
+      B_reg_reg[1]    CK ^ -> Q v  DFFRHQX1   0.298  0.298    -0.148  
+      g213            B v -> Y ^   NOR2XL     0.175  0.473    0.028  
+      g209            AN ^ -> Y ^  NAND2BXL   0.174  0.648    0.202  
+      sum_out_reg[1]  SE ^         SDFFRHQX1  0.000  0.648    0.202  
+      ----------------------------------------------------------------
+Path 5: VIOLATED Setup Check with Pin A_reg_reg[0]/CK 
+Endpoint:   A_reg_reg[0]/D (v) checked with  leading edge of 'clk'
+Beginpoint: A_in[0]        (v) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.348
++ Phase Shift                   1.000
+= Required Time                 0.652
+- Arrival Time                  1.000
+= Slack Time                   -0.348
+     Clock Rise Edge                      0.000
+     + Input Delay                        1.000
+     = Beginpoint Arrival Time            1.000
+      -----------------------------------------------------------
+      Instance      Arc        Cell      Delay  Arrival  Required  
+                                                Time     Time  
+      -----------------------------------------------------------
+      -             A_in[0] v  -         -      1.000    0.652  
+      A_reg_reg[0]  D v        DFFRHQX1  0.000  1.000    0.652  
+      -----------------------------------------------------------
+Path 6: VIOLATED Setup Check with Pin B_reg_reg[1]/CK 
+Endpoint:   B_reg_reg[1]/D (v) checked with  leading edge of 'clk'
+Beginpoint: B_in[1]        (v) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.348
++ Phase Shift                   1.000
+= Required Time                 0.652
+- Arrival Time                  1.000
+= Slack Time                   -0.348
+     Clock Rise Edge                      0.000
+     + Input Delay                        1.000
+     = Beginpoint Arrival Time            1.000
+      -----------------------------------------------------------
+      Instance      Arc        Cell      Delay  Arrival  Required  
+                                                Time     Time  
+      -----------------------------------------------------------
+      -             B_in[1] v  -         -      1.000    0.652  
+      B_reg_reg[1]  D v        DFFRHQX1  0.000  1.000    0.652  
+      -----------------------------------------------------------
+Path 7: VIOLATED Setup Check with Pin A_reg_reg[1]/CK 
+Endpoint:   A_reg_reg[1]/D (v) checked with  leading edge of 'clk'
+Beginpoint: A_in[1]        (v) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.348
++ Phase Shift                   1.000
+= Required Time                 0.652
+- Arrival Time                  1.000
+= Slack Time                   -0.348
+     Clock Rise Edge                      0.000
+     + Input Delay                        1.000
+     = Beginpoint Arrival Time            1.000
+      -----------------------------------------------------------
+      Instance      Arc        Cell      Delay  Arrival  Required  
+                                                Time     Time  
+      -----------------------------------------------------------
+      -             A_in[1] v  -         -      1.000    0.652  
+      A_reg_reg[1]  D v        DFFRHQX1  0.000  1.000    0.652  
+      -----------------------------------------------------------
+Path 8: VIOLATED Setup Check with Pin B_reg_reg[2]/CK 
+Endpoint:   B_reg_reg[2]/D (v) checked with  leading edge of 'clk'
+Beginpoint: B_in[2]        (v) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.348
++ Phase Shift                   1.000
+= Required Time                 0.652
+- Arrival Time                  1.000
+= Slack Time                   -0.348
+     Clock Rise Edge                      0.000
+     + Input Delay                        1.000
+     = Beginpoint Arrival Time            1.000
+      -----------------------------------------------------------
+      Instance      Arc        Cell      Delay  Arrival  Required  
+                                                Time     Time  
+      -----------------------------------------------------------
+      -             B_in[2] v  -         -      1.000    0.652  
+      B_reg_reg[2]  D v        DFFRHQX1  0.000  1.000    0.652  
+      -----------------------------------------------------------
+Path 9: VIOLATED Setup Check with Pin B_reg_reg[0]/CK 
+Endpoint:   B_reg_reg[0]/D (v) checked with  leading edge of 'clk'
+Beginpoint: B_in[0]        (v) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.348
++ Phase Shift                   1.000
+= Required Time                 0.652
+- Arrival Time                  1.000
+= Slack Time                   -0.348
+     Clock Rise Edge                      0.000
+     + Input Delay                        1.000
+     = Beginpoint Arrival Time            1.000
+      -----------------------------------------------------------
+      Instance      Arc        Cell      Delay  Arrival  Required  
+                                                Time     Time  
+      -----------------------------------------------------------
+      -             B_in[0] v  -         -      1.000    0.652  
+      B_reg_reg[0]  D v        DFFRHQX1  0.000  1.000    0.652  
+      -----------------------------------------------------------
+Path 10: VIOLATED Setup Check with Pin A_reg_reg[3]/CK 
+Endpoint:   A_reg_reg[3]/D (v) checked with  leading edge of 'clk'
+Beginpoint: A_in[3]        (v) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.348
++ Phase Shift                   1.000
+= Required Time                 0.652
+- Arrival Time                  1.000
+= Slack Time                   -0.348
+     Clock Rise Edge                      0.000
+     + Input Delay                        1.000
+     = Beginpoint Arrival Time            1.000
+      -----------------------------------------------------------
+      Instance      Arc        Cell      Delay  Arrival  Required  
+                                                Time     Time  
+      -----------------------------------------------------------
+      -             A_in[3] v  -         -      1.000    0.652  
+      A_reg_reg[3]  D v        DFFRHQX1  0.000  1.000    0.652  
+      -----------------------------------------------------------
+Path 11: VIOLATED Setup Check with Pin B_reg_reg[3]/CK 
+Endpoint:   B_reg_reg[3]/D (v) checked with  leading edge of 'clk'
+Beginpoint: B_in[3]        (v) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.348
++ Phase Shift                   1.000
+= Required Time                 0.652
+- Arrival Time                  1.000
+= Slack Time                   -0.348
+     Clock Rise Edge                      0.000
+     + Input Delay                        1.000
+     = Beginpoint Arrival Time            1.000
+      -----------------------------------------------------------
+      Instance      Arc        Cell      Delay  Arrival  Required  
+                                                Time     Time  
+      -----------------------------------------------------------
+      -             B_in[3] v  -         -      1.000    0.652  
+      B_reg_reg[3]  D v        DFFRHQX1  0.000  1.000    0.652  
+      -----------------------------------------------------------
+Path 12: VIOLATED Setup Check with Pin A_reg_reg[2]/CK 
+Endpoint:   A_reg_reg[2]/D (v) checked with  leading edge of 'clk'
+Beginpoint: A_in[2]        (v) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.348
++ Phase Shift                   1.000
+= Required Time                 0.652
+- Arrival Time                  1.000
+= Slack Time                   -0.348
+     Clock Rise Edge                      0.000
+     + Input Delay                        1.000
+     = Beginpoint Arrival Time            1.000
+      -----------------------------------------------------------
+      Instance      Arc        Cell      Delay  Arrival  Required  
+                                                Time     Time  
+      -----------------------------------------------------------
+      -             A_in[2] v  -         -      1.000    0.652  
+      A_reg_reg[2]  D v        DFFRHQX1  0.000  1.000    0.652  
+      -----------------------------------------------------------
+Path 13: VIOLATED Late External Delay Assertion 
+Endpoint:   sum_out[1]       (^) checked with  leading edge of 'clk'
+Beginpoint: sum_out_reg[1]/Q (^) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- External Delay                1.000
++ Phase Shift                   1.000
+= Required Time                 0.000
+- Arrival Time                  0.335
+= Slack Time                   -0.335
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      -----------------------------------------------------------------
+      Instance        Arc           Cell       Delay  Arrival  Required  
+                                                      Time     Time  
+      -----------------------------------------------------------------
+      sum_out_reg[1]  CK ^          -          -      0.000    -0.335  
+      sum_out_reg[1]  CK ^ -> Q ^   SDFFRHQX1  0.335  0.335    0.000  
+      -               sum_out[1] ^  -          0.000  0.335    0.000  
+      -----------------------------------------------------------------
+Path 14: VIOLATED Setup Check with Pin sum_out_reg[1]/CK 
+Endpoint:   sum_out_reg[1]/SI (v) checked with  leading edge of 'clk'
+Beginpoint: A_reg_reg[0]/Q    (v) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.786
++ Phase Shift                   1.000
+= Required Time                 0.214
+- Arrival Time                  0.541
+= Slack Time                   -0.326
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ----------------------------------------------------------------
+      Instance        Arc          Cell       Delay  Arrival  Required  
+                                                     Time     Time  
+      ----------------------------------------------------------------
+      A_reg_reg[0]    CK ^         -          -      0.000    -0.326  
+      A_reg_reg[0]    CK ^ -> Q v  DFFRHQX1   0.300  0.300    -0.026  
+      g214            B v -> Y ^   NAND2XL    0.180  0.480    0.153  
+      g208            A ^ -> Y v   INVXL      0.061  0.541    0.214  
+      sum_out_reg[1]  SI v         SDFFRHQX1  0.000  0.541    0.214  
+      ----------------------------------------------------------------
+Path 15: VIOLATED Late External Delay Assertion 
+Endpoint:   carry_out       (^) checked with  leading edge of 'clk'
+Beginpoint: carry_out_reg/Q (^) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- External Delay                1.000
++ Phase Shift                   1.000
+= Required Time                 0.000
+- Arrival Time                  0.326
+= Slack Time                   -0.326
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      --------------------------------------------------------------
+      Instance       Arc          Cell      Delay  Arrival  Required  
+                                                   Time     Time  
+      --------------------------------------------------------------
+      carry_out_reg  CK ^         -         -      0.000    -0.326  
+      carry_out_reg  CK ^ -> Q ^  DFFRHQX1  0.326  0.326    0.000  
+      -              carry_out ^  -         0.000  0.326    0.000  
+      --------------------------------------------------------------
+Path 16: VIOLATED Late External Delay Assertion 
+Endpoint:   sum_out[0]       (^) checked with  leading edge of 'clk'
+Beginpoint: sum_out_reg[0]/Q (^) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- External Delay                1.000
++ Phase Shift                   1.000
+= Required Time                 0.000
+- Arrival Time                  0.326
+= Slack Time                   -0.326
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ----------------------------------------------------------------
+      Instance        Arc           Cell      Delay  Arrival  Required  
+                                                     Time     Time  
+      ----------------------------------------------------------------
+      sum_out_reg[0]  CK ^          -         -      0.000    -0.326  
+      sum_out_reg[0]  CK ^ -> Q ^   DFFRHQX1  0.326  0.326    0.000  
+      -               sum_out[0] ^  -         0.000  0.326    0.000  
+      ----------------------------------------------------------------
+Path 17: VIOLATED Late External Delay Assertion 
+Endpoint:   sum_out[2]       (^) checked with  leading edge of 'clk'
+Beginpoint: sum_out_reg[2]/Q (^) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- External Delay                1.000
++ Phase Shift                   1.000
+= Required Time                 0.000
+- Arrival Time                  0.326
+= Slack Time                   -0.326
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ----------------------------------------------------------------
+      Instance        Arc           Cell      Delay  Arrival  Required  
+                                                     Time     Time  
+      ----------------------------------------------------------------
+      sum_out_reg[2]  CK ^          -         -      0.000    -0.326  
+      sum_out_reg[2]  CK ^ -> Q ^   DFFRHQX1  0.326  0.326    0.000  
+      -               sum_out[2] ^  -         0.000  0.326    0.000  
+      ----------------------------------------------------------------
+Path 18: VIOLATED Late External Delay Assertion 
+Endpoint:   sum_out[3]       (^) checked with  leading edge of 'clk'
+Beginpoint: sum_out_reg[3]/Q (^) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- External Delay                1.000
++ Phase Shift                   1.000
+= Required Time                 0.000
+- Arrival Time                  0.326
+= Slack Time                   -0.326
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ----------------------------------------------------------------
+      Instance        Arc           Cell      Delay  Arrival  Required  
+                                                     Time     Time  
+      ----------------------------------------------------------------
+      sum_out_reg[3]  CK ^          -         -      0.000    -0.326  
+      sum_out_reg[3]  CK ^ -> Q ^   DFFRHQX1  0.326  0.326    0.000  
+      -               sum_out[3] ^  -         0.000  0.326    0.000  
+      ----------------------------------------------------------------
+Path 19: VIOLATED Setup Check with Pin sum_out_reg[1]/CK 
+Endpoint:   sum_out_reg[1]/D (v) checked with  leading edge of 'clk'
+Beginpoint: B_reg_reg[0]/Q   (^) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.765
++ Phase Shift                   1.000
+= Required Time                 0.235
+- Arrival Time                  0.540
+= Slack Time                   -0.305
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ----------------------------------------------------------------
+      Instance        Arc          Cell       Delay  Arrival  Required  
+                                                     Time     Time  
+      ----------------------------------------------------------------
+      B_reg_reg[0]    CK ^         -          -      0.000    -0.305  
+      B_reg_reg[0]    CK ^ -> Q ^  DFFRHQX1   0.393  0.393    0.088  
+      g214            A ^ -> Y v   NAND2XL    0.147  0.540    0.235  
+      sum_out_reg[1]  D v          SDFFRHQX1  0.000  0.540    0.235  
+      ----------------------------------------------------------------
+Path 20: VIOLATED Setup Check with Pin sum_out_reg[0]/CK 
+Endpoint:   sum_out_reg[0]/D (v) checked with  leading edge of 'clk'
+Beginpoint: B_reg_reg[0]/Q   (^) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.359
++ Phase Shift                   1.000
+= Required Time                 0.641
+- Arrival Time                  0.709
+= Slack Time                   -0.068
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ---------------------------------------------------------------
+      Instance        Arc          Cell      Delay  Arrival  Required  
+                                                    Time     Time  
+      ---------------------------------------------------------------
+      B_reg_reg[0]    CK ^         -         -      0.000    -0.068  
+      B_reg_reg[0]    CK ^ -> Q ^  DFFRHQX1  0.393  0.393    0.325  
+      g214            A ^ -> Y v   NAND2XL   0.147  0.540    0.472  
+      g211            B0 v -> Y ^  OAI21XL   0.113  0.653    0.585  
+      g210            A ^ -> Y v   INVXL     0.057  0.709    0.641  
+      sum_out_reg[0]  D v          DFFRHQX1  0.000  0.709    0.641  
+      ---------------------------------------------------------------
+
+<CMD> report_timing -max_paths 5
+Path 1: VIOLATED Setup Check with Pin sum_out_reg[3]/CK 
+Endpoint:   sum_out_reg[3]/D (v) checked with  leading edge of 'clk'
+Beginpoint: B_reg_reg[0]/Q   (^) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.371
++ Phase Shift                   1.000
+= Required Time                 0.629
+- Arrival Time                  1.380
+= Slack Time                   -0.751
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ----------------------------------------------------------------
+      Instance        Arc           Cell      Delay  Arrival  Required  
+                                                     Time     Time  
+      ----------------------------------------------------------------
+      B_reg_reg[0]    CK ^          -         -      0.000    -0.751  
+      B_reg_reg[0]    CK ^ -> Q ^   DFFRHQX1  0.393  0.393    -0.358  
+      g214            A ^ -> Y v    NAND2XL   0.147  0.540    -0.211  
+      g206            A0 v -> Y ^   OAI21XL   0.234  0.773    0.023  
+      g204            CI ^ -> CO ^  ADDFX2    0.329  1.102    0.352  
+      g202            CI ^ -> S v   ADDFX2    0.278  1.380    0.629  
+      sum_out_reg[3]  D v           DFFRHQX1  0.000  1.380    0.629  
+      ----------------------------------------------------------------
+Path 2: VIOLATED Setup Check with Pin carry_out_reg/CK 
+Endpoint:   carry_out_reg/D (v) checked with  leading edge of 'clk'
+Beginpoint: B_reg_reg[1]/Q  (v) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.370
++ Phase Shift                   1.000
+= Required Time                 0.630
+- Arrival Time                  1.308
+= Slack Time                   -0.679
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ---------------------------------------------------------------
+      Instance       Arc           Cell      Delay  Arrival  Required  
+                                                    Time     Time  
+      ---------------------------------------------------------------
+      B_reg_reg[1]   CK ^          -         -      0.000    -0.679  
+      B_reg_reg[1]   CK ^ -> Q v   DFFRHQX1  0.298  0.298    -0.380  
+      g213           B v -> Y ^    NOR2XL    0.175  0.473    -0.205  
+      g206           A1 ^ -> Y v   OAI21XL   0.148  0.621    -0.057  
+      g204           CI v -> CO v  ADDFX2    0.354  0.975    0.297  
+      g202           CI v -> CO v  ADDFX2    0.333  1.308    0.630  
+      carry_out_reg  D v           DFFRHQX1  0.000  1.308    0.630  
+      ---------------------------------------------------------------
+Path 3: VIOLATED Setup Check with Pin sum_out_reg[2]/CK 
+Endpoint:   sum_out_reg[2]/D (v) checked with  leading edge of 'clk'
+Beginpoint: B_reg_reg[0]/Q   (^) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.371
++ Phase Shift                   1.000
+= Required Time                 0.629
+- Arrival Time                  1.107
+= Slack Time                   -0.477
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ---------------------------------------------------------------
+      Instance        Arc          Cell      Delay  Arrival  Required  
+                                                    Time     Time  
+      ---------------------------------------------------------------
+      B_reg_reg[0]    CK ^         -         -      0.000    -0.477  
+      B_reg_reg[0]    CK ^ -> Q ^  DFFRHQX1  0.393  0.393    -0.084  
+      g214            A ^ -> Y v   NAND2XL   0.147  0.540    0.062  
+      g206            A0 v -> Y ^  OAI21XL   0.234  0.773    0.296  
+      g204            CI ^ -> S v  ADDFX2    0.333  1.107    0.629  
+      sum_out_reg[2]  D v          DFFRHQX1  0.000  1.107    0.629  
+      ---------------------------------------------------------------
+Path 4: VIOLATED Setup Check with Pin sum_out_reg[1]/CK 
+Endpoint:   sum_out_reg[1]/SE (^) checked with  leading edge of 'clk'
+Beginpoint: B_reg_reg[1]/Q    (v) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.798
++ Phase Shift                   1.000
+= Required Time                 0.202
+- Arrival Time                  0.648
+= Slack Time                   -0.446
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+      ----------------------------------------------------------------
+      Instance        Arc          Cell       Delay  Arrival  Required  
+                                                     Time     Time  
+      ----------------------------------------------------------------
+      B_reg_reg[1]    CK ^         -          -      0.000    -0.446  
+      B_reg_reg[1]    CK ^ -> Q v  DFFRHQX1   0.298  0.298    -0.148  
+      g213            B v -> Y ^   NOR2XL     0.175  0.473    0.028  
+      g209            AN ^ -> Y ^  NAND2BXL   0.174  0.648    0.202  
+      sum_out_reg[1]  SE ^         SDFFRHQX1  0.000  0.648    0.202  
+      ----------------------------------------------------------------
+Path 5: VIOLATED Setup Check with Pin A_reg_reg[2]/CK 
+Endpoint:   A_reg_reg[2]/D (v) checked with  leading edge of 'clk'
+Beginpoint: A_in[2]        (v) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Other End Arrival Time          0.000
+- Setup                         0.348
++ Phase Shift                   1.000
+= Required Time                 0.652
+- Arrival Time                  1.000
+= Slack Time                   -0.348
+     Clock Rise Edge                      0.000
+     + Input Delay                        1.000
+     = Beginpoint Arrival Time            1.000
+      -----------------------------------------------------------
+      Instance      Arc        Cell      Delay  Arrival  Required  
+                                                Time     Time  
+      -----------------------------------------------------------
+      -             A_in[2] v  -         -      1.000    0.652  
+      A_reg_reg[2]  D v        DFFRHQX1  0.000  1.000    0.652  
+      -----------------------------------------------------------
+
+
+*** Memory Usage v#1 (Current mem = 1742.938M, initial mem = 394.918M) ***
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     UI-2004              3  %s design is already loaded, skip this %...
+ERROR     IMPTCM-48            3  "%s" is not a legal option for command "...
+WARNING   TCLCMD-513           2  The software could not find a matching o...
+ERROR     TCLCMD-917           2  Cannot find '%s' that match '%s'         
+WARNING   TCLCMD-958           2  Previously defined source objects for cl...
+ERROR     TCLCMD-981           2  Unsupported extra argument '%s' in comma...
+ERROR     TCLCMD-1313          1  Unsupported extra argument '%s' in comma...
+WARNING   TCLCMD-1594          2  A clock with name %s was already defined...
+WARNING   TECHLIB-302          1  No function defined for cell '%s'. The c...
+*** Message Summary: 7 warning(s), 11 error(s)
+
+--- Ending "Tempus Timing Signoff Solution" (totcpu=0:00:10.9, real=3:31:45, mem=1742.9M) ---
