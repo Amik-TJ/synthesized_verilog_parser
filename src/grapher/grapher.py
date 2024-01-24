@@ -4,12 +4,24 @@ import matplotlib
 import random
 import json
 import sys
+import os
+import pandas as pd
+import torch
+from torch_geometric.utils import from_networkx
 matplotlib.use('Qt5Agg')
 
+node_features_csv_file_location = '/home/amik/E-Drive/McGill/PhD/timing_estimation/synthesized_verilog_parser/data/outputs/tsmc_180_slow_preprocessed.xlsx'
 
-def read_parsed_lib_from_json(parsed_lib_json_path):
-    with open(parsed_lib_json_path, 'r') as file:
-        return json.load(file)
+
+def read_preprocessed_node_features(node_features_csv_file_location):
+
+    if os.path.exists(node_features_csv_file_location):
+        df = pd.read_excel(node_features_csv_file_location)
+        return df
+    else:
+        print("File does not exist at the specified path : ", node_features_csv_file_location)
+        sys.exit()
+
 
 
 
@@ -91,22 +103,40 @@ def grapher(in_n, out_n, nodes, edges, gate_type_and_name_mapping, parsed_lib_js
     # plt.show()
 
 
+    # Adding node features and graph label
+    pyg_graph =  add_node_features(G,gate_type_and_name_mapping)
+    return pyg_graph
+
+
+
+
+
+def add_node_features(G, gate_type_and_name_mapping):
+
+    df = read_preprocessed_node_features(node_features_csv_file_location)
+    cols = len(df.axes[1])
+    null_features_for_unknown_node = [0] * (cols - 1)
+
+
     # Adding node features
-    add_node_features(G,gate_type_and_name_mapping, parsed_lib_json_path)
-
-
-
-
-
-def add_node_features(G, gate_type_and_name_mapping, parsed_lib_json_path):
-
-    parsed_json_feature_list = read_parsed_lib_from_json(parsed_lib_json_path)
-
     for node in G.nodes():
         if node in gate_type_and_name_mapping:
             gate_type = gate_type_and_name_mapping[node]
-            feature_list = parsed_json_feature_list[gate_type]
-            print(feature_list)
+            specific_row = df.loc[df['gate_name'] == gate_type]
+            node_features = specific_row.values.tolist()[0][1:]  # We use [0] to get the first (and only) item
+            G.nodes[node]['features'] = node_features
         else:
-            print('Done Present in Dictionary', node)
+            print('Node Feature not found')
+            print(node)
+            G.nodes[node]['features'] = null_features_for_unknown_node
 
+
+
+    # Adding graph level label
+    G.graph['label'] = random.uniform(1.0, 10.0)
+
+
+    # Converting graph in pytorch geometric graph
+    pyg_graph = from_networkx(G, group_node_attrs=['features'])
+
+    return pyg_graph

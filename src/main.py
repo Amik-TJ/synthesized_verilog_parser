@@ -8,6 +8,8 @@ from verilog_parser_engine.sta_label_parser import sta_label_parser
 # Dynamically get the root directory of your project
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(project_root)
+sys.path.append('/home/amik/E-Drive/McGill/PhD/timing_estimation/synthesized_verilog_parser/src/helper')
+
 
 
 verilog_dict = {
@@ -33,7 +35,7 @@ verilog_dict = {
 }
 
 
-active = 1
+active = 3
 
 
 def main():
